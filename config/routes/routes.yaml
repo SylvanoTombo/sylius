@@ -1,0 +1,15 @@
+app_admin_export_configuration:
+    resource: |
+        alias: app.export_configuration
+        section: admin
+        path: admin/export
+        templates: SyliusAdminBundle:Crud
+        form: App\Form\ExportConfigurationType
+        redirect: update
+        grid: app_admin_export_configuration
+        vars:
+            all:
+                subheader: app.ui.export_configuration
+            index:
+                icon: 'file image outline'
+    type: sylius.resource
